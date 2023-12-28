@@ -7,6 +7,7 @@ jobs:
     steps:
       - run: sudo apt-get install ant git gcc cmake
       - run: sudo apt-get install openjdk-11-jdk
+      - run: test -d /usr/lib/jvm/java-11-openjdk-amd64 && echo "Folder exists" || echo "Folder does not exist"
       - run: export PATH:$PATH:JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
       - run: echo $PATH
       - run: sudo apt-get install bison flex pkg-config
